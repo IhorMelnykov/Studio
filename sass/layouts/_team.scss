@@ -20,13 +20,37 @@
   line-height: 1.19;
 }
 
+.team__title {
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+}
+
 .team__list {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .team__member {
-  width: calc((100% - 90px) / 4);
+  // width: calc((100% - 90px) / 4);
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 90px) / 4);
+  }
+
   text-align: center;
 
   background-color: var(--primary-background-color);
