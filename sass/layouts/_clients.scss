@@ -1,0 +1,31 @@
+.clients__list {
+  display: flex;
+  gap: 30px;
+}
+
+.clients__item {
+  flex-basis: calc(100% - 150px / 6);
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.clients__link {
+  border: solid 1px #afb1b8;
+  border-radius: 4px;
+  width: 100%;
+  height: 92px;
+  @extend %flex-align;
+  fill: #afb1b8;
+
+  transition: fill var(--main-transition), border-color var(--main-transition);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+}

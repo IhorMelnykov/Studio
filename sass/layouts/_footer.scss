@@ -1,0 +1,161 @@
+.container.foot {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #2f303a;
+}
+
+.logo.secondary {
+  margin-bottom: 20px;
+  & span {
+    color: var(--secondary-text-color);
+  }
+}
+
+.location {
+  color: var(--secondary-text-color);
+  line-height: 1.71;
+  text-decoration: none;
+
+  transition: color var(--main-transition);
+}
+
+.contacts.secondary > li {
+  margin-top: 9px;
+}
+.contact-footer {
+  color: rgba(255, 255, 255, 0.6);
+
+  line-height: 1.71;
+  text-decoration: none;
+
+  transition: color var(--main-transition);
+
+  &:not(:first-child) {
+    margin-top: 9px;
+  }
+}
+
+.follow-footer {
+  margin-left: 70px;
+  & .title {
+    margin-bottom: 20px;
+
+    color: var(--secondary-text-color);
+
+    font-size: inherit;
+    font-weight: var(--secondary-font-weight);
+    text-transform: uppercase;
+  }
+}
+
+.footer-soc {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer-soc-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.1);
+
+  @extend %flex-align;
+
+  transition: background-color var(--main-transition);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+
+.footer-soc-icon {
+  fill: var(--primary-background-color);
+
+  transition: fill var(--main-transition);
+
+  .footer-soc-link:hover &,
+  .footer-soc-link:focus & {
+    fill: var(--primary-background-color);
+  }
+}
+
+.subscribe-footer {
+  margin-left: 93px;
+  & .title {
+    margin-bottom: 20px;
+
+    color: var(--secondary-text-color);
+
+    font-size: inherit;
+    font-weight: var(--secondary-font-weight);
+    text-transform: uppercase;
+  }
+}
+
+.subscribe-form {
+  display: flex;
+}
+
+.email-input {
+  height: 50px;
+  width: 358px;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  font-size: var(--secondaty-font-size);
+  line-height: 1.25;
+
+  @extend %flex-align;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.btn-subscribe-footer {
+  @extend %flex-align;
+  padding-left: 29px;
+  padding-right: 28px;
+  margin-left: 12px;
+
+  font-weight: 700;
+  @include font(0.06em, var(--secondaty-font-size), 1.88);
+
+  background-color: var(--accent-color);
+  color: var(--secondary-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+
+  transition: color var(--main-transition),
+    background-color var(--main-transition);
+
+  &:hover,
+  &:focus {
+    color: var(--title-text-color);
+    background-color: var(--secondary-background-color);
+  }
+}
+
+.icon-send {
+  fill: var(--secondary-text-color);
+  margin-left: 10px;
+  transition: fill var(--main-transition);
+
+  .btn-subscribe-footer:focus > &,
+  .btn-subscribe-footer:hover > & {
+    fill: var(--title-text-color);
+  }
+}

@@ -1,0 +1,14 @@
+.logo.primary,
+.logo.secondary {
+  color: var(--accent-color);
+
+  font-family: "Raleway", sans-serif;
+  font-weight: var(--secondary-font-weight);
+  font-size: 26px;
+  line-height: 1.11;
+  text-decoration: none;
+}
+
+.logo.primary span {
+  color: #000000;
+}

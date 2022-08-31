@@ -1,0 +1,219 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 500ms linear, visibility 500ms linear;
+}
+
+.modal {
+  position: absolute;
+  width: 528px;
+  min-height: 581px;
+  top: 50%;
+  left: 50%;
+
+  background: var(--primary-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--main-transition);
+
+  padding: 40px;
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  @extend %flex-align;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.modal-icon {
+  fill: #000000;
+  transition: fill var(--main-transition);
+  .modal-close:hover > &,
+  .modal-close:focus > & {
+    fill: var(--accent-color);
+  }
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  margin-bottom: 12px;
+
+  color: var(--title-text-color);
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.input-field {
+  margin-bottom: 10px;
+}
+
+.textarea {
+  margin-bottom: none;
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+
+  padding-left: 42px;
+  color: var(--title-text-color);
+
+  @include font(0.01em, 12px, 1.67);
+
+  transition: outline var(--main-transition);
+  &:focus {
+    outline: 1px solid var(--accent-color);
+  }
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  transition: fill var(--main-transition);
+
+  .form-input:focus + & {
+    fill: var(--accent-color);
+  }
+}
+
+.input-title {
+  display: block;
+  margin-bottom: 4px;
+
+  @include font(0.01em, 12px, 1.17);
+
+  color: var(--primary-text-color);
+}
+
+.modal-comment {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  padding: 12px 16px;
+  cursor: pointer;
+
+  @include font(0.01em, 12px, 1.67);
+
+  transition: outline var(--main-transition);
+  &:focus {
+    outline: 1px solid var(--accent-color);
+  }
+  &::placeholder {
+    @include font(0.01em, 12px, 1.67);
+
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.policy-link {
+  color: var(--accent-color);
+}
+
+.input-checkbox {
+  margin-top: 20px;
+}
+
+.check-text {
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--primary-text-color);
+  @extend %flex-align;
+
+  & span {
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--title-text-color);
+    border-radius: 3px;
+    margin-right: 8px;
+    @extend %flex-align;
+
+    transition: background-color var(--main-transition),
+      border-color var(--main-transition);
+    .input-check:checked + & {
+      background-color: var(--accent-color);
+      border-color: var(--accent-color);
+    }
+    .input-check:focus + & {
+      border-color: var(--accent-color);
+    }
+  }
+}
+
+.icon-check {
+  fill: transparent;
+  transition: fill var(--main-transition);
+  .input-check:checked + .check-text & {
+    fill: var(--primary-background-color);
+  }
+}
+
+.modal-button {
+  background-color: var(--accent-color);
+  color: var(--secondary-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  font-weight: 700;
+
+  @include font(0.06em, var(--secondaty-font-size), 1.88);
+
+  border: none;
+
+  min-width: 200px;
+  height: 50px;
+  padding: 10px 52px;
+
+  transition: color var(--main-transition),
+    background-color var(--main-transition);
+
+  &:hover,
+  &:focus {
+    color: var(--title-text-color);
+    background-color: var(--secondary-background-color);
+  }
+}
+
+.modal-button-wrap {
+  margin-top: 30px;
+  @extend %flex-align;
+  text-align: center;
+}
