@@ -1,10 +1,28 @@
 .clients__list {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
+}
+
+.clients__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  margin-bottom: 30px;
+
+  text-align: center;
 }
 
 .clients__item {
-  flex-basis: calc(100% - 150px / 6);
+  width: calc((100% - 30px) / 2);
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 60px) / 3);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 150px) / 6);
+  }
+
   &:first-child {
     margin-left: 0;
   }
