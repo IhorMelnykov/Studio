@@ -27,9 +27,16 @@
   }
 }
 
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .bottom-item {
   border-top: none;
   border: 1px solid #eeeeee;
+  flex-grow: 1;
 }
 
 .gallery-item-wrap {
