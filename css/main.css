@@ -452,7 +452,6 @@ body {
 
 .modal {
   position: absolute;
-  width: 450px;
   min-height: 609px;
   top: 50%;
   left: 50%;
@@ -463,7 +462,12 @@ body {
   transition: transform var(--main-transition);
   padding: 40px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 450px) {
+  .modal {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 480px) {
   .modal {
     width: 450px;
     min-height: 609px;
