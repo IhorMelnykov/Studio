@@ -1,15 +1,25 @@
 .works {
   padding-top: 0;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .works__list {
-  width: calc((100% - 60px) / 3);
+  // width: calc((100% - 60px) / 3);
   display: flex;
   gap: 30px;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .works__wrap {
   position: relative;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .works__description {
@@ -25,4 +35,8 @@
 
   background-color: rgba(47, 48, 58, 0.8);
   color: var(--secondary-text-color);
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
