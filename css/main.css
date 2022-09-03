@@ -697,6 +697,26 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 60px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .container.foot {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container.foot {
+    flex-direction: row;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    text-align: start;
+    gap: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .footer {
@@ -734,10 +754,14 @@ body {
 }
 
 .follow-footer {
-  margin-left: 70px;
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+@media screen and (min-width: 1200px) {
+  .follow-footer {
+    align-items: flex-start;
+  }
 }
 .follow-footer .title {
   margin-bottom: 20px;
@@ -776,7 +800,17 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-left: 93px;
+}
+@media screen and (max-width: 1199px) {
+  .subscribe-footer {
+    text-align: center;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscribe-footer {
+    margin-left: 93px;
+  }
 }
 .subscribe-footer .title {
   margin-bottom: 20px;
@@ -790,10 +824,15 @@ body {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 1200px) {
+  .subscribe-form {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
 
 .email-input {
-  height: 50px;
-  width: 450px;
+  width: 100%;
   padding-left: 16px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -805,11 +844,27 @@ body {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 }
+@media screen and (min-width: 480px) {
+  .email-input {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .email-input {
+    margin-right: 12px;
+    max-width: 358px;
+  }
+}
 
 .btn-subscribe-footer {
+  padding-left: 29px;
+  padding-right: 28px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin-top: 20px;
-  width: 200px;
-  height: 50px;
+  min-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 700;
   letter-spacing: 0.06em;
   font-size: var(--secondaty-font-size);
@@ -820,6 +875,11 @@ body {
   border-radius: 4px;
   border: none;
   transition: color var(--main-transition), background-color var(--main-transition);
+}
+@media screen and (min-width: 1200px) {
+  .btn-subscribe-footer {
+    margin-top: 0;
+  }
 }
 .btn-subscribe-footer:hover, .btn-subscribe-footer:focus {
   color: var(--title-text-color);
