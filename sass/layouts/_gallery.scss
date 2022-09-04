@@ -7,7 +7,7 @@
 .gallery-box {
   text-decoration: none;
   // width: calc((100% - 60px) / 3);
-  width: 100%;
+  // width: 100%;
 
   @media screen and (min-width: 768px) {
     width: calc((100% - 30px) / 2);
@@ -32,6 +32,12 @@
   flex-direction: column;
   height: 100%;
 }
+
+// .gallery-photo {
+//   display: block;
+//   max-width: 100%;
+//   height: auto;
+// }
 
 .bottom-item {
   border-top: none;

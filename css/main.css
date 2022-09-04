@@ -25,12 +25,6 @@ h6 {
   margin: 0;
 }
 
-.gallery-photo {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 button {
   cursor: pointer;
 }
@@ -49,7 +43,6 @@ ul {
 
 img {
   display: block;
-  width: 100%;
   max-width: 100%;
   height: auto;
 }
@@ -1225,7 +1218,7 @@ body {
 .portfolio-filter {
   display: flex;
   margin-bottom: 40px;
-  gap: 8px;
+  gap: 15px 8px;
   flex-wrap: wrap;
 }
 @media screen and (min-width: 768px) {
@@ -1262,7 +1255,6 @@ body {
 
 .gallery-box {
   text-decoration: none;
-  width: 100%;
   transition: box-shadow var(--main-transition);
 }
 @media screen and (min-width: 768px) {
