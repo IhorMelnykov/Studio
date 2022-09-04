@@ -1255,6 +1255,7 @@ body {
 
 .gallery-box {
   text-decoration: none;
+  width: 100%;
   transition: box-shadow var(--main-transition);
 }
 @media screen and (min-width: 768px) {
@@ -1281,7 +1282,11 @@ body {
 .bottom-item {
   border-top: none;
   border: 1px solid #eeeeee;
-  flex-grow: 1;
+}
+@media screen and (min-width: 768px) {
+  .bottom-item {
+    flex-grow: 1;
+  }
 }
 
 .gallery-item-wrap {
