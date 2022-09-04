@@ -13,13 +13,18 @@
   }
 
   @media screen and (min-width: 1200px) {
+    display: flex;
     flex-direction: row;
-    align-items: baseline;
     flex-wrap: nowrap;
-    text-align: start;
     gap: 0;
-    margin-left: 0;
-    margin-right: 0;
+  }
+}
+
+.info-footer {
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    text-align: start;
   }
 }
 
@@ -132,6 +137,10 @@
 
   & .title {
     margin-bottom: 20px;
+
+    @media screen and (min-width: 1200px) {
+      text-align: start;
+    }
 
     color: var(--secondary-text-color);
 
