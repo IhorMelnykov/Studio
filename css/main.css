@@ -80,7 +80,7 @@ body {
   margin: -1px;
 }
 
-.btn-subscribe-footer, .email-input, .footer-soc-link, .clients__link, .socials__link, .works__description, .feautures__box, .modal-button-wrap, .check-text span, .check-text, .modal-close, .menu-close, .contacts.primary {
+.btn-subscribe-footer, .email-input, .footer-soc-link, .clients__link, .socials__link, .works__description, .feautures__box, .modal-button-wrap, .check-text span, .check-text, .modal-close, .contacts.primary {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -146,12 +146,11 @@ body {
 .header {
   border-bottom: 1px solid #ececec;
   min-height: 60px;
-  width: 100%;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   .header {
     height: 80px;
-    max-width: 1200px;
   }
 }
 
@@ -312,22 +311,27 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding-top: 48px;
+  padding-top: 10px;
   padding-bottom: 48px;
 }
 
-.container-menu {
+.container.menu {
   padding-left: 40px;
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.menu-main {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  height: 100%;
 }
 
 .menu-close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
+  display: block;
+  margin-left: auto;
   width: 40px;
   height: 40px;
   border: none;
@@ -451,8 +455,6 @@ body {
 }
 
 .overlay {
-  min-height: 400px;
-  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-bg-mob.jpg);
@@ -468,8 +470,6 @@ body {
 }
 @media screen and (min-width: 768px) {
   .overlay {
-    min-height: 400px;
-    max-width: 768px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-bg-tab.jpg);
   }
 }
@@ -480,8 +480,6 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .overlay {
-    min-height: 600px;
-    max-width: 1200px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-img.jpg);
   }
 }
@@ -875,6 +873,8 @@ body {
 @media screen and (min-width: 1200px) {
   .team__title {
     margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
   }
 }
 
@@ -946,6 +946,13 @@ body {
   line-height: 1.18;
   margin-bottom: 30px;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .clients__title {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
 }
 
 .clients__item {
@@ -1225,6 +1232,7 @@ body {
   .portfolio-filter {
     align-items: center;
     justify-content: center;
+    margin-bottom: 30px;
   }
 }
 
